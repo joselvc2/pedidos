@@ -43,8 +43,9 @@ public class CategoriaController {
 
     }
 
-    @PutMapping
-    public void updateCategoria(@RequestBody Categoria categoria) {
+    @PutMapping("/{id}")
+    public void updateCategoria(@RequestBody Categoria categoria, @PathVariable("id") Long id) {
+        categoria.setId(id);
         categoriaRepository.save(categoria);
     }
 

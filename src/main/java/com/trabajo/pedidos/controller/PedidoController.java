@@ -45,8 +45,9 @@ public class PedidoController {
 
     }
 
-    @PutMapping
-    public void updatePedido(@RequestBody Pedido pedido) {
+    @PutMapping("/{id}")
+    public void updatePedido(@RequestBody Pedido pedido, @PathVariable("id") Long id) {
+        pedido.setId(id);
         pedidoRepository.save(pedido);
     }
 

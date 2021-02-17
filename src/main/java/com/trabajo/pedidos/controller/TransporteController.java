@@ -46,8 +46,9 @@ public class TransporteController {
 
     }
 
-    @PutMapping
-    public void updateTransporte(@RequestBody Transporte transporte) {
+    @PutMapping("/{id}")
+    public void updateTransporte(@RequestBody Transporte transporte, @PathVariable("id") Long id) {
+        transporte.setId(id);
         transporteRepository.save(transporte);
     }
 

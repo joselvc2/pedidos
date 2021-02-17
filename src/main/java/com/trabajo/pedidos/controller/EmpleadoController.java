@@ -45,8 +45,9 @@ public class EmpleadoController {
 
 	}
     
-    @PutMapping
-	public void updateEmpleado(@RequestBody Empleado empleado) {
+    @PutMapping("/{id}")
+	public void updateEmpleado(@RequestBody Empleado empleado, @PathVariable("id") Long id) {
+		empleado.setId(id);
 		empleadoRepository.save(empleado);
 	}
     

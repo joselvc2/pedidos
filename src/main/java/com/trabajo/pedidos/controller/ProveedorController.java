@@ -44,8 +44,9 @@ public class ProveedorController {
 
     }
 
-    @PutMapping
-    public void updateProveedor(@RequestBody Proveedor proveedor) {
+    @PutMapping("/{id}")
+    public void updateProveedor(@RequestBody Proveedor proveedor, @PathVariable("id") Long id) {
+        proveedor.setId(id);
         proveedorRepository.save(proveedor);
     }
 

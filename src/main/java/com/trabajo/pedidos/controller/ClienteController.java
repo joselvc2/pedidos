@@ -44,9 +44,11 @@ public class ClienteController {
 
     }
 
-    @PutMapping
-    public void updateCliente(@RequestBody Cliente cliente) {
+    @PutMapping("/{id}")
+    public void updateCliente(@RequestBody Cliente cliente, @PathVariable("id") Long id) {
+        cliente.setId(id);
         clienteRepository.save(cliente);
+
     }
 
 }

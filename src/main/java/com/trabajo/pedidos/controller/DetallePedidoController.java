@@ -46,8 +46,9 @@ public class DetallePedidoController {
 
     }
 
-    @PutMapping
-    public void updateDetallePedido(@RequestBody DetallePedido detallePedido) {
+    @PutMapping("/{id}")
+    public void updateDetallePedido(@RequestBody DetallePedido detallePedido,@PathVariable("id") Long id) {
+        detallePedido.setId(id);
         detallePedidoRepository.save(detallePedido);
     }
 

@@ -46,8 +46,9 @@ public class ProductoController {
 
     }
 
-    @PutMapping
-    public void updateProducto(@RequestBody Producto producto) {
+    @PutMapping("/{id}")
+    public void updateProducto(@RequestBody Producto producto, @PathVariable("id") Long id) {
+        producto.setId(id);
         productoRepository.save(producto);
     }
 
