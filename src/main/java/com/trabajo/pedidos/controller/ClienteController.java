@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/clientes")
+@CrossOrigin
 public class ClienteController {
     private final ClienteRepository clienteRepository;
     public ClienteController(ClienteRepository clienteRepository) {

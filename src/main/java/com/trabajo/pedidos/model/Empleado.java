@@ -18,5 +18,7 @@ public class Empleado {
 	private String nombres;
 	
 	private String apellidos;
+
+	private String direccion;
 	
 }

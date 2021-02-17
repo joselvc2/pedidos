@@ -1,9 +1,9 @@
 package com.trabajo.pedidos.controller;
 
 import com.trabajo.pedidos.exception.ModelNotFoundException;
-import com.trabajo.pedidos.model.Producto;
+
 import com.trabajo.pedidos.model.Transporte;
-import com.trabajo.pedidos.repository.ProductoRepository;
+
 import com.trabajo.pedidos.repository.TransporteRepository;
 import org.springframework.web.bind.annotation.*;
 

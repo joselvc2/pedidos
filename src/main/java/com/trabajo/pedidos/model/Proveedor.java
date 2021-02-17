@@ -16,10 +16,10 @@ public class Proveedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 30)
+    @Column(length = 50)
     private String nombreEmpresa;
 
-    @Column(length = 30)
+    @Column(length = 50)
     private String nombreContacto;
 
     @Column(length = 70)

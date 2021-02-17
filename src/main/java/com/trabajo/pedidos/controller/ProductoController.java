@@ -2,9 +2,9 @@ package com.trabajo.pedidos.controller;
 
 import com.trabajo.pedidos.exception.ModelNotFoundException;
 import com.trabajo.pedidos.model.Producto;
-import com.trabajo.pedidos.model.Proveedor;
+
 import com.trabajo.pedidos.repository.ProductoRepository;
-import com.trabajo.pedidos.repository.ProveedorRepository;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/productos")
+@CrossOrigin
 public class ProductoController {
 
     private final ProductoRepository productoRepository;

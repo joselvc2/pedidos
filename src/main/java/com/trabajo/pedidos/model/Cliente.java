@@ -22,4 +22,5 @@ public class Cliente {
     @Column(length = 9)
     private String telefono;
 
+
 }
